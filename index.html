@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valley Hockey</title>
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="Images/hockey-fav.png" type="image/x-icon">
+    <!-- Tailwind and Daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Custom Class -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'hockey-button': "#FF4240",
+              'hockey-text': "#424247", 
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Google Fonts Manrope --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom Styles -->
+    <style>
+      .font-manrope {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-manrope">
+    <header class="container mx-auto px-1 py-5 lg:px-36 lg:py-10">
+      <!-- Navbar -->
+      <nav>
+          <div class="navbar bg-base-100">
+              <div class="navbar-start">
+                <div class="dropdown flex lg:hidden">
+                  <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                  </div>
+                  <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Pages</a></li>
+                      <li><a href="#">Blog</a></li>
+                      <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <a class="text-2xl lg:text-4xl font-extrabold">Hockey<span class="text-hockey-button font-extrabold"><sup>,</sup></span>s</a>
+                </div>
+              </div>
+              <div class="navbar-center hidden lg:flex">
+                  <ul class="flex space-x-10">
+                      <li><a href="#" class="text-hockey-text hover:text-hockey-button duration-500">Home</a></li>
+                      <li><a href="#" class="text-hockey-text hover:text-hockey-button duration-500">About</a></li>
+                      <li><a href="#" class="text-hockey-text hover:text-hockey-button duration-500">Pages</a></li>
+                      <li><a href="#" class="text-hockey-text hover:text-hockey-button duration-500">Blog</a></li>
+                      <li><a href="#" class="text-hockey-text hover:text-hockey-button duration-500">Contact</a></li>
+                  </ul>
+              </div>
+              <div class="navbar-end">
+                <button class="btn btn-ghost btn-circle hidden lg:flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hockey-text hover:text-hockey-button duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </button>
+                <button class="btn w-[120px] lg:w-auto text-white bg-hockey-button text-10 lg:text-xl hover:text-black duration-700">Get Ticket</button>
+              </div>
+            </div>
+      </nav>
+  </header>
+  <main>
+    <!-- Banner Section -->
+    <section class="container mx-auto px-5 py-5 lg:px-36 lg:py-16">
+      <div class="relative">
+          <div class="carousel w-full h-[250px] lg:h-[550px]">
+              <!-- Slider 1 -->
+              <div id="slide1" class="carousel-item relative w-full">
+                <img src="Images/1.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href="#slide4" class="btn bg-black text-white border-black rounded-full hover:text-black duration-500">❮</a> 
+                  <a href="#slide2" class="btn bg-black text-white border-black rounded-full hover:text-black duration-500">❯</a>
+                </div>
+              </div> 
+              <!-- Slider 2 -->
+              <div id="slide2" class="carousel-item relative w-full">
+                <img src="Images/2.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href="#slide1" class="btn bg-black text-white border-black rounded-full hover:text-black duration-500">❮</a> 
+                  <a href="#slide3" class="btn bg-black text-white border-black rounded-full hover:text-black duration-500">❯</a>
+                </div>
+              </div> 
+              <!-- Slider 3 -->
+              <div id="slide3" class="carousel-item relative w-full">
+                <img src="Images/3.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href="#slide2" class="btn bg-black text-white border-black rounded-full hover:text-black duration-500">❮</a> 
+                  <a href="#slide4" class="btn bg-black text-white border-black rounded-full hover:text-black duration-500">❯</a>
+                </div>
+              </div> 
+              <!-- Slider 4 -->
+              <div id="slide4" class="carousel-item relative w-full">
+                <img src="Images/4.png" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href="#slide3" class="btn bg-black text-white border-black rounded-full hover:text-black duration-500">❮</a> 
+                  <a href="#slide1" class="btn bg-black text-white border-black rounded-full hover:text-black duration-500">❯</a>
+                </div>
+              </div>
+            </div>
+            <!-- Banner Badge -->
+            <div class="bg-[#131318] mt-5 h-[200px] lg:w-[560px] lg:h-[160px] p-8 rounded-2xl space-y-3 lg:absolute bottom-8 right-8">
+              <h3 class="text-2xl text-white font-extrabold">Meet all the heroes from the field</h3>
+              <p class="text-[#ffffff99] font-medium">
+                Gather on the ice rink, where hockey legends converge. Witness the prowess and camaraderie as field's heroes clash, mesmerizing spectators.</p>
+            </div>
+      </div>
+  </section>
+  </main>
+  <footer>
+
+  </footer>
+  </body>
+</html>
